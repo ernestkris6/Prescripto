@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
+
+  const [isLogin, setIsLogin] = useState(false)
   return (
     <div>
        <img src="" alt='' />
@@ -26,10 +28,11 @@ export default function Navbar() {
             <hr />
         </NavLink>
 
-        <NavLink>
-            <button>LOGIN</button>
-        </NavLink>
        </ul>
+
+       <div>
+        {isLogin? <button>Book Appointment</button> : <button>LOGIN</button>}
+       </div>
     </div>
   )
 }
