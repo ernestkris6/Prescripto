@@ -14,7 +14,7 @@ import Error from './Pages/Error';
 
 export default function App() {
   return (
-    <div>
+    <div className='mx-[10%]'>
       <Navbar />
        <Routes>
           <Route index element={<Home />}/>
