@@ -1,9 +1,12 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import Home from './Pages/Home';
 import Doctors from './Pages/Doctors'
-import { Route, Routes } from 'react-router-dom';
 import Appointment from './Pages/Appointment';
 import Navbar from './components/Navbar';
+
+
 
 export default function App() {
   return (
@@ -11,6 +14,12 @@ export default function App() {
       <Navbar />
        <Routes>
           <Route path='/' element={<Home />}/>
+          <Route path='doctors' element={<Doctors />} />
+          <Route path='doctors' element={<Doctors />} />
+          <Route path='doctors' element={<Doctors />} />
+          <Route path='doctors' element={<Doctors />} />
+          <Route path='doctors' element={<Doctors />} />
+          <Route path='doctors' element={<Doctors />} />
           <Route path='doctors' element={<Doctors />} />
           <Route path='appointment' element={<Appointment />} />
        </Routes>
