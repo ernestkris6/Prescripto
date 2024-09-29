@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { assets } from '../assets/assets'
+// import { assets } from '../assets/assets'
 
 export default function Navbar() {
 
   const [isLogin, setIsLogin] = useState(false)
   return (
     <div className='flex items-center justify-around mt-4'>
-       <img src={assets.} alt='' />
+       {/* <img src={assets.logo} alt='logo' /> */}
        <ul className='flex items-center justify-around gap-6'>
         <NavLink>
             <li>HOME</li>

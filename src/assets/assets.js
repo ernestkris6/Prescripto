@@ -11,9 +11,11 @@ import tick_icon from './tick_icon.svg'
 import appointments_icon from './appointments_icon.svg'
 import earning_icon from './earning_icon.svg'
 import patients_icon from './patients_icon.svg'
+import logo from './logo.svg';
 
 export const assets = {
     add_icon,
+    logo,
     admin_logo,
     appointment_icon,
     cancel_icon,
@@ -43,5 +45,118 @@ export const specialtyData = [
         specialty : "Dermatologist",
         image : Dermatologist
 
-    }
+    },
+    {
+        specialty : "Pediatrician",
+        image : Pediatricia
+    },
+    {
+        specialty : "Neurologist",
+        image : Dermatologis
+    },
+    {
+        specialty : "Neurologist",
+        image : Dermatologist
+
+    },
+    {
+        specialty : "Gastroenterologist",
+        image : Gastroenterologist
+
+    },
+]
+
+
+export const doctors = [
+    {
+        id : "doc1",
+        name : "Dr. Richard James",
+        image : doc1,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc2",
+        name : "Dr. Emily Larson",
+        image : doc2,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc3",
+        name : "Dr. Richard James",
+        image : doc1,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc4",
+        name : "Dr. Richard James",
+        image : doc1,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc5",
+        name : "Dr. Richard James",
+        image : doc1,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc6",
+        name : "Dr. Richard James",
+        image : doc1,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc7",
+        name : "Dr. Richard James",
+        image : doc1,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
 ]
