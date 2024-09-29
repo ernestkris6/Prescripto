@@ -27,3 +27,21 @@ export const assets = {
     appointments_icon,
     earning_icon
 }
+
+
+export const specialtyData = [
+    {
+        specialty : "General physicial",
+        image : General_physician
+    },
+    {
+        specialty : "Gynecologist",
+        image : Gynecologist
+
+    },
+    {
+        specialty : "Dermatologist",
+        image : Dermatologist
+
+    }
+]
