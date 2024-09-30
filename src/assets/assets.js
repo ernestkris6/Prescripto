@@ -14,6 +14,7 @@ import patients_icon from './patients_icon.svg'
 import logo_icon from './logo.svg';
 import doc1 from './doc1.png'
 
+
 export const assets = {
     add_icon,
     doc1,

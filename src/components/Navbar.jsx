@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 // import { assets } from '../assets/assets'
-// import {assets} from '../assets/assets'
 import logo from "../assets/logo.svg";
 import drop from "../assets/dropdown_icon.svg";
 import profile from "../assets/profile_pic.png"
 
-
+1
 export default function Navbar() {
 
   const [showMenu, setshowMenu] = useState(false);
