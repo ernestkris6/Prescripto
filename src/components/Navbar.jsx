@@ -46,14 +46,14 @@ export default function Navbar() {
           <img className='w-2.5' src={drop} />
          <div className='absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block'>
           <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
-              <div className='hover:bg-blue-500 rounded p-1'>
-              <p className='hover:text-black cursor-pointer' onClick={()=> navigate('my-profile')}>My Profile</p>
+              <div className='hover:bg-primary rounded p-1'>
+                <p className='hover:text-black cursor-pointer' onClick={()=> navigate('my-profile')}>My Profile</p>
               </div>
-              <div className='hover:bg-blue-500 rounded p-1'>
-              <p className='hover:text-black cursor-pointer' onClick={()=> navigate('my-appointments')}>My Appointment</p>
+              <div className='hover:bg-primary rounded p-1'>
+                <p className='hover:text-black cursor-pointer' onClick={()=> navigate('my-appointments')}>My Appointment</p>
               </div>
-              <div className='hover:bg-blue-500 rounded p-1'>
-              <p className='hover:text-black cursor-pointer' onClick={()=> setToken(false)}>Logout</p>
+              <div className='hover:bg-primary rounded p-1'>
+                <p className='hover:text-black cursor-pointer' onClick={()=> setToken(false)}>Logout</p>
               </div>
             </div>
           </div>
