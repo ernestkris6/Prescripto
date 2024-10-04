@@ -11,7 +11,7 @@ import tick_icon from './tick_icon.svg'
 import appointments_icon from './appointments_icon.svg'
 import earning_icon from './earning_icon.svg'
 import patients_icon from './patients_icon.svg'
-import logo_icon from './logo.svg';
+import logo_icon from './logo.svg'
 import doc1 from './doc1.png'
 
 
