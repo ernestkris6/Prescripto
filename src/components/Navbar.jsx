@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 // import { assets } from '../assets/assets'
 import logo from "../assets/logo.svg";
 import drop from "../assets/dropdown_icon.svg";
@@ -15,7 +15,9 @@ export default function Navbar() {
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
        {/* <img src={assets.doc1} alt='logo' /> */}
-       <img className='w-44 cursor-pointer' src={logo} alt='logo'/>
+       <Link to='/'>
+          <img className='w-44 cursor-pointer' src={logo} alt='logo'/>
+       </Link>
        <ul className='hidden md:flex items-center justify-around gap-6'>
         <NavLink to='/'>
             <li className='py-1'>HOME</li>
