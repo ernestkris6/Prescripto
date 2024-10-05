@@ -10,9 +10,12 @@ export default function SpecialityMenu() {
             Find by Speciality
         </h1>
         <p className='text-center font-bold mt-4'>Simply browse through our list of trusted doctors, schedule your appointment hassle free</p>
-        <div>
+        <div className='grid grid-cols-2 items-center justify-center gap-4 md:flex'>
         {specialityData.map((item, index)=> (
-          <p key={index}>{item.speciality}</p>
+          <div className='mt-8 mx-auto'>
+            <img className='p-6' src={item.image} alt="" />
+            <p className='font-bold text-center mt-2' key={index}>{item.speciality}</p>
+          </div>
         ))}
         </div>
     </div>

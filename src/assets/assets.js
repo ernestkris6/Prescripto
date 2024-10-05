@@ -13,6 +13,14 @@ import earning_icon from './earning_icon.svg'
 import patients_icon from './patients_icon.svg'
 import logo_icon from './logo.svg'
 import doc1 from './doc1.png'
+import General_physician from './General_physician.svg'
+import Gynecologist from './assets/Gynecologist.svg'
+import Dermatologist from './assets/Dermatologist.svg'
+import Pediatricians from './assets/Pediatricians.svg'
+import Dermatologist from './assets/Dermatologist.svg'
+import Neurologist from './assets/Neurologist.svg'
+import Gastroenterologist from './assets/Gastroenterologist.svg'
+
 
 
 export const assets = {
@@ -37,34 +45,29 @@ export const assets = {
 export const specialityData = [
     {
         speciality : "General physicial",
-        // image : General_physician
+        image : General_physician
     },
     {
         speciality : "Gynecologist",
-        // image : Gynecologist
+        image : Gynecologist
 
     },
     {
         speciality : "Dermatologist",
-        // image : Dermatologist
+        image : Dermatologist
 
     },
     {
         speciality : "Pediatrician",
-        // image : Pediatricia
+        image : Pediatricians
     },
     {
         speciality : "Neurologist",
-        // image : Dermatologis
-    },
-    {
-        speciality : "Neurologist",
-        // image : Dermatologist
-
+        image : Neurologist
     },
     {
         speciality : "Gastroenterologist",
-        // image : Gastroenterologist
+        image : Gastroenterologist
 
     },
 ]
