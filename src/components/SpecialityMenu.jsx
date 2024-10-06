@@ -1,21 +1,22 @@
 import React from 'react';
 
 import { specialityData } from '../items';
+import { Link } from 'react-router-dom';
 
 
 export default function SpecialityMenu() {
   return (
-    <div id='#speciality'>
-        <h1 className='text-2xl text-center font-bold mt-8 justify'>
+    <div className='flex flex-col items-center gap-4 py-16 text-gray-500' id='#speciality'>
+        <h1 className='text-3xl font-md'>
             Find by Speciality
         </h1>
-        <p className='text-center font-bold mt-4'>Simply browse through our list of trusted doctors, schedule your appointment hassle free</p>
-        <div className='grid grid-cols-2 items-center justify-center gap-4 md:flex'>
+        <p className='sm:w-1/3 text-center text-md'>Simply browse through our list of trusted doctors, schedule your appointment hassle free</p>
+        <div className='flex sm:justify-center gap-4 pt-5 w-full overflow-scroll'>
         {specialityData.map((item, index)=> (
-          <div className='mt-8 mx-auto'>
-            <img className='p-6 w-12' src={item.image} alt="" />
+          <Link className='flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500s' to={`doctors/${item.speciality}`}>
+            <img className='w-16 sm:w-24 mb-2' src={item.image} alt="" />
             <p className='font-bold text-center mt-2' key={index}>{item.speciality}</p>
-          </div>
+          </Link >
         ))}
         </div>
     </div>
