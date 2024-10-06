@@ -13,7 +13,7 @@ export default function SpecialityMenu() {
         <div className='grid grid-cols-2 items-center justify-center gap-4 md:flex'>
         {specialityData.map((item, index)=> (
           <div className='mt-8 mx-auto'>
-            <img className='p-6' src={item.image} alt="" />
+            <img className='p-6 w-12' src={item.image} alt="" />
             <p className='font-bold text-center mt-2' key={index}>{item.speciality}</p>
           </div>
         ))}
