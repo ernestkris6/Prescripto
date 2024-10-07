@@ -84,7 +84,7 @@ export const doctors = [
     },
     {
         id : "doc3",
-        name : "Dr. Richard James",
+        name : "Dr. Mike Tyler",
         image : doc3,
         degree : "MBBS",
         speciality : "Dermatologist",
@@ -98,7 +98,7 @@ export const doctors = [
     },
     {
         id : "doc4",
-        name : "Dr. Richard James",
+        name : "Dr. Peter Brown",
         image : doc4,
         degree : "MBBS",
         speciality : "Pediatrician",
@@ -112,7 +112,7 @@ export const doctors = [
     },
     {
         id : "doc5",
-        name : "Dr. Richard James",
+        name : "Dr. Christy Garcia",
         image : doc5,
         degree : "MBBS",
         speciality : "Neurologist",
@@ -126,7 +126,7 @@ export const doctors = [
     },
     {
         id : "doc6",
-        name : "Dr. Richard James",
+        name : "Dr. Jimmy Anderson",
         image : doc6,
         degree : "MBBS",
         speciality : "Gastroenterologist",
@@ -140,8 +140,61 @@ export const doctors = [
     },
     {
         id : "doc7",
-        name : "Dr. Richard James",
+        name : "Dr. Nicholas Johnson",
         image : doc7,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc8",
+        name : "Dr. Gerald Stone",
+        image : doc8,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc9",
+        name : "Dr. Richard James",
+        image : doc9
+        ,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc10",
+        name : "Dr. Richard James",
+        image : doc10,
+        degree : "MBBS",
+        experience : "4 Years",
+        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
+        fees : 50,
+        address : {
+            line1 : "17th Cross, Richmond",
+            line2 : "Circle, Ring Road, London"
+        }
+    },
+    {
+        id : "doc11",
+        name : "Dr. Richard James",
+        image : doc11,
         degree : "MBBS",
         experience : "4 Years",
         about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
@@ -154,7 +207,7 @@ export const doctors = [
     {
         id : "doc7",
         name : "Dr. Richard James",
-        image : doc7,
+        image : doc12,
         degree : "MBBS",
         experience : "4 Years",
         about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
@@ -165,9 +218,9 @@ export const doctors = [
         }
     },
     {
-        id : "doc7",
+        id : "doc12",
         name : "Dr. Richard James",
-        image : doc7,
+        image : doc13,
         degree : "MBBS",
         experience : "4 Years",
         about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
@@ -178,9 +231,9 @@ export const doctors = [
         }
     },
     {
-        id : "doc7",
+        id : "doc13",
         name : "Dr. Richard James",
-        image : doc7,
+        image : doc14,
         degree : "MBBS",
         experience : "4 Years",
         about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
@@ -191,61 +244,9 @@ export const doctors = [
         }
     },
     {
-        id : "doc7",
+        id : "doc14",
         name : "Dr. Richard James",
-        image : doc7,
-        degree : "MBBS",
-        experience : "4 Years",
-        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
-        fees : 50,
-        address : {
-            line1 : "17th Cross, Richmond",
-            line2 : "Circle, Ring Road, London"
-        }
-    },
-    {
-        id : "doc7",
-        name : "Dr. Richard James",
-        image : doc7,
-        degree : "MBBS",
-        experience : "4 Years",
-        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
-        fees : 50,
-        address : {
-            line1 : "17th Cross, Richmond",
-            line2 : "Circle, Ring Road, London"
-        }
-    },
-    {
-        id : "doc7",
-        name : "Dr. Richard James",
-        image : doc7,
-        degree : "MBBS",
-        experience : "4 Years",
-        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
-        fees : 50,
-        address : {
-            line1 : "17th Cross, Richmond",
-            line2 : "Circle, Ring Road, London"
-        }
-    },
-    {
-        id : "doc7",
-        name : "Dr. Richard James",
-        image : doc7,
-        degree : "MBBS",
-        experience : "4 Years",
-        about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
-        fees : 50,
-        address : {
-            line1 : "17th Cross, Richmond",
-            line2 : "Circle, Ring Road, London"
-        }
-    },
-    {
-        id : "doc7",
-        name : "Dr. Richard James",
-        image : doc7,
+        image : doc15,
         degree : "MBBS",
         experience : "4 Years",
         about : "Dr. Richard has a strong commitment to delivering comprehensive medical care to patients, and has been very much efficient to giving people a greater chance to better health conditions.",
