@@ -15,7 +15,7 @@ export default function Header() {
           <img className='w-28' src={head} alt="" />   
           <p>Simply browse through our extensive list of trusted doctors<br className='hidden md:block'/> Schedule an appointment today...</p>   
         </div>
-        <a className='flex items-center gap-2 bg-white rounded-full px-8 py-3 text-gray-600 text-sm m-auto md:m-0 hover:scale-105 transition-all duration-300' href="#speciality">Book Appointment <img className='w-3' src={arrow} alt="" /></a>
+        <a className='flex items-center gap-2 bg-white rounded-full px-8 py-3 text-gray-600 text-sm m-auto md:m-0 hover:scale-105 transition-all duration-300' href="#speciality">Book Appointment<img className='w-3' src={arrow} alt="" /></a>
       </div>
       
       {/*---------Right side ----------- */}
