@@ -11,6 +11,8 @@ import Appointments from './Pages/Appointments';
 import Create from './Pages/Create';
 import Login from './Pages/Login';
 import Error from './Pages/Error';
+import Footer from './components/Footer';
+
 
 
 export default function App() {
@@ -29,6 +31,7 @@ export default function App() {
           <Route path='appointment/:docId' element={<Appointment />} />
           <Route path='*' element={<Error />} />
         </Routes>
+      <Footer />
     </div>
   )
 }
