@@ -31,7 +31,7 @@ export default function App() {
           <Route path='appointment/:docId' element={<Appointment />} />
           <Route path='*' element={<Error />} />
         </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

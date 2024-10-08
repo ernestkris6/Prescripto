@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import { doctors } from '../items'
+// import { doctors } from '../items'
 import { useNavigate } from 'react-router-dom'
+import { AppContext } from '../Context/AppContext'
 
 export default function Topdoctors() {
 
     const navigate = useNavigate()
+    const {doctors} = useContext(AppContext)
+
 
   return (
     <div className='flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10'>
@@ -25,7 +28,7 @@ export default function Topdoctors() {
                     </div>
                 ))}
             </div>
-            <button className='bg-blue-50 py-3 px-8 rounded-full text-gray-600 px-12 mt-10 hover:scale-105 transition-all duration-300'>more</button>
+            <button onClick={()=>{ navigate('doctors'), scrollTo(0,0)}} className='bg-blue-50 py-3 px-8 rounded-full text-gray-600 px-12 mt-10 hover:scale-105 transition-all duration-300'>more</button>
     </div>
   )
 }

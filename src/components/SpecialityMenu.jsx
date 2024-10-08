@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function SpecialityMenu() {
   return (
-    <div className='flex flex-col items-center gap-4 py-16 text-gray-500' id='#speciality'>
+    <div id='speciality' className='flex flex-col items-center gap-4 py-16 text-gray-500'>
         <h1 className='text-3xl font-md'>
             Find by Speciality
         </h1>

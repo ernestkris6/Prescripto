@@ -1,13 +1,15 @@
 import { createContext } from "react";
-import { doctors } from "../items";
+import { doctors, specialityData } from "../items";
 
 
 export const AppContext = createContext()
 
-function AppContextProvider({children}) {
+const AppContextProvider =({children})=> {
 
    const value = {
-        doctors
+        doctors,
+        specialityData,
+
     }
 
     return (
