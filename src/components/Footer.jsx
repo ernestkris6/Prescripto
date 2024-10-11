@@ -21,7 +21,7 @@ export default function Footer() {
            {/*---------Center Section-------*/}
            <div>
             <p className='font-bold'>COMPANY</p>
-            <ul>
+            <ul className=''>
               <li>Home</li>
               <li>About Us</li> 
               <li>Contact Us</li>
@@ -32,7 +32,7 @@ export default function Footer() {
             {/*---------Right Section--------*/}
             <div>
                 <p className='font-bold'>GET IN TOUCH</p>
-                <ul>
+                <ul className='leading-tight'>
                   <li>+1-212-456-7980</li>
                   <li>prescripto@gmail.com</li>
                 </ul>
@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
 
       <div>
-        {/*-----Copyright Section-----*/}
+        {/* -----Copyright Section------ */}
         <hr className='h-4 py-1 font-3xl' />
         <p className='text-center my-4'>Copyright 2024 &copy; Prescripto - All Rights Reserved.</p>
       </div>
