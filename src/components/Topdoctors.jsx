@@ -6,7 +6,8 @@ import { AppContext } from '../Context/AppContext'
 
 export default function Topdoctors() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
     const {doctors} = useContext(AppContext)
 
 

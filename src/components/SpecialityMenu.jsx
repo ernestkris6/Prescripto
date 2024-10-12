@@ -1,7 +1,9 @@
-import React from 'react';
-
-import { specialityData } from '../items';
+import React, { useContext } from 'react'
+import { AppContext } from '../Context/AppContext'
 import { Link } from 'react-router-dom';
+// import { specialityData } from '../items';
+
+const {specialityData} = useContext(AppContext)
 
 
 export default function SpecialityMenu() {

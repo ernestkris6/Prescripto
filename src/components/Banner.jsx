@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom'
 export default function Banner() {
 
     const navigate = useNavigate();
-  return (
+
+    return (
+        
     <div className='flex bg-primary rounded-lg px-6 sm:px-10 md:px-14 my-20 lg:px-12 md:mx-10 '>
         {/* Left Side */}
         <div className='flex-1 py-8 sm:py-10 md:py-16 lg:py-18 lg:pl-5'>

@@ -9,12 +9,11 @@ const AppContextProvider =({children})=> {
    const value = {
         doctors,
         specialityData,
-
     }
 
     return (
         <AppContext.Provider 
-        value={value}>
+            value={value}>
             {children}
         </AppContext.Provider>
     )
