@@ -3,10 +3,12 @@ import { AppContext } from '../Context/AppContext'
 import { Link } from 'react-router-dom';
 // import { specialityData } from '../items';
 
-const {specialityData} = useContext(AppContext)
 
 
 export default function SpecialityMenu() {
+
+  const {specialityData} = useContext(AppContext)
+
   return (
     <div id='speciality' className='flex flex-col items-center gap-4 py-16 text-gray-500'>
         <h1 className='text-3xl font-md'>

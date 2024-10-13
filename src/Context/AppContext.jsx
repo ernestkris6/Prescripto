@@ -5,6 +5,8 @@ import { doctors, specialityData } from "../items";
 export const AppContext = createContext()
 
 const AppContextProvider =({children})=> {
+    
+    
 
    const value = {
         doctors,
