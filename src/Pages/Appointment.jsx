@@ -11,7 +11,7 @@ export default function Appointment() {
 
   const [docInfo, setDocInfo] = useState(null);
 
-  const fetchDocInfo = async () => {
+  const fetchDocInfo = () => {
       const docInfo = doctors.find(doc => doc.id === docId)
       setDocInfo(docInfo)
       console.log(docInfo);
@@ -27,10 +27,9 @@ export default function Appointment() {
       {/*---------Doc Info----------*/}
       <div>
         <div>
-          <img src={docInfo.image} alt="" />
-     
-                   
+          <img src={docInfo} alt="" />                   
         </div>
+      
       </div>
 
     </div>
