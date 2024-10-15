@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 // import { assets } from '../assets/assets'
 import logo from "../assets/logo.svg";
 import drop from "../assets/dropdown_icon.svg";
@@ -12,12 +12,12 @@ export default function Navbar() {
   const [token, setToken] =useState(true);
 
   const navigate = useNavigate();
+
+  
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
        {/* <img src={assets.doc1} alt='logo' /> */}
-       <Link to='/'>
-          <img className='w-44 cursor-pointer' src={logo} alt='logo'/>
-       </Link>
+          <img onClick={()=> navigate('/')} className='w-44 cursor-pointer' src={logo} alt='logo'/>
        <ul className='hidden md:flex items-center justify-around gap-6'>
         <NavLink to='/'>
             <li className='py-1'>HOME</li>
