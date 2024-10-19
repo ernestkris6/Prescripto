@@ -120,9 +120,25 @@ export default function Appointment() {
       {/*---------Booking Slot----------*/}
       <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-700'>
             <p>Booking slot</p>
+            <div className='flex gap-3 items-center w-full overflow-x-scroll mt-4'>
+              {
+                docSlot.length && docSlot.map((item, index)=> (
+                  <div onClick={()=> setSlotIndex(index)} className={`text-center py-6 rounded-full cursor-pointer min-w-16 ${slotIndex === index ? "bg-primary text-white" : "border border-gray-200"}`} key={index}>
+                      <p>{item[0] && daysOfTheWeek[item[0].dateTime.getDay()]}</p>
+                      <p>{item[0] && item[0].dateTime.getDate()}</p>
+                      
+                  </div>
+                ))
+              }
+            </div>
       </div>
-
-
+      
+      <div className='flex items-center gap-3 w-full overflow-x-scroll mt-4'>
+        {docSlot.length && docSlot[slotIndex].map((item, index) => (
+          <p className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${docSlot === index ? "bg-primary text-white" : "border border-gray-200"}`} key={index}>{item.time.toLowerCase()}</p>
+        ))}
+      </div>
+      <button className='bg-primary py-3 px-8 rounded-full text-white text-sm mt-8'>Book appointement</button>
     </div>
   )
 }
