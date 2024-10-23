@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useFetcher, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 import verified from '../assets/verified_icon.svg';
 import info from '../assets/info_icon.svg'
+import RelatedDoctors from '../components/RelatedDoctors';
 
 export default function Appointment() {
 
@@ -14,7 +15,7 @@ export default function Appointment() {
   const [docInfo, setDocInfo] = useState(null);
   const [docSlot, setDocSlot] = useState([]);
   const [slotIndex, setSlotIndex] = useState(0);
-  const [slotTime, setslotTime] = useState('');
+  const [slotTime, setSlotTime] = useState('');
 
   const fetchDocInfo = async () => {
       const docInfo = doctors.find(doc => doc.id === docId)
@@ -135,10 +136,12 @@ export default function Appointment() {
       
       <div className='flex items-center gap-3 w-full overflow-x-scroll mt-4'>
         {docSlot.length && docSlot[slotIndex].map((item, index) => (
-          <p className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${docSlot === index ? "bg-primary text-white" : "border border-gray-200"}`} key={index}>{item.time.toLowerCase()}</p>
+          <p onClick={()=> setSlotTime(item.time)} className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${item.time === slotTime ? "bg-primary text-white" : "border border-gray-200"}`} key={index}>{item.time.toLowerCase()}</p>
         ))}
+            <button className='bg-primary py-3 px-16 rounded-full text-white text-sm mt-8'>Book your appointement</button>
       </div>
-      <button className='bg-primary py-3 px-8 rounded-full text-white text-sm mt-8'>Book appointement</button>
+
+      <RelatedDoctors />
     </div>
   )
 }
