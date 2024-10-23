@@ -38,10 +38,13 @@ export default function Doctors() {
           className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Dermatologist' ? "bg-indigo-100 text-black" : ""}`}>Dermatologist</p>
           <p onClick={()=> speciality === 'Pediatrician' ? navigate('/doctors') : navigate('/doctors/Pediatrician')} 
           className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Pediatrician' ? "bg-indigo-100 text-black" : ""}`}>Pediatrician</p>
+          <p onClick={()=> speciality === 'Optometrist' ? navigate('/doctors') : navigate('/doctors/Optometrist')} className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Optometrist' ? "bg-indigo-100 text-black" : ""}`}>Optometrist</p>
+          <p onClick={()=> speciality === 'Gastroenterologist' ? navigate('/doctors') : navigate('/doctors/Gastroenterologist')} className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Gastroenterologist' ? "bg-indigo-100 text-black" : ""}`}>Gastroenterologist</p>
           <p onClick={()=> speciality === 'Neurologist' ? navigate('/doctors') : navigate('/doctors/Neurologist')} 
           className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Neurologist' ? "bg-indigo-100 text-black" : ""}`}>Neurologist</p>
-          <p onClick={()=> speciality === 'Gastroenterologist' ? navigate('/doctors') : navigate('/doctors/Gastroenterologist')} className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Gastroenterologist' ? "bg-indigo-100 text-black" : ""}`}>Gastroenterologist</p>
+          <p onClick={()=> speciality === 'Dentist' ? navigate('/doctors') : navigate('/doctors/Dentist')} className={`w-[90vw] hover:bg-indigo-100 sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Dentist' ? "bg-indigo-100 text-black" : ""}`}>Dentist</p>
         </div>
+        
         <div className='w-full grid grid-cols-auto gap-4 pt-5 gap-y-6 px-3 sm:px-0'>
           {
             filterDoc.map((item, index)=> (

@@ -5,6 +5,7 @@ import verified from '../assets/verified_icon.svg';
 import info from '../assets/info_icon.svg'
 import RelatedDoctors from '../components/RelatedDoctors';
 
+
 export default function Appointment() {
 
   const {docId} = useParams();
@@ -84,10 +85,10 @@ export default function Appointment() {
   }, [docInfo])
   
 
-  useEffect(function(){
-    console.log(docSlot);
+  // useEffect(function(){
+  //   console.log(docSlot);
     
-  }, [docSlot])
+  // }, [docSlot])
 
   if(!docInfo) return <div>LOADING...</div>
 
@@ -142,8 +143,7 @@ export default function Appointment() {
             </div>
             <button className='bg-primary py-3 px-16 rounded-full text-white text-sm mt-8'>Book your appointement</button>
       </div>
-
-    
+              <RelatedDoctors docId={docId} speciality={docInfo.speciality}/>
     </div>
     
   )
