@@ -10,9 +10,9 @@ export default function About() {
       <div className='my-10 flex flex-col md:flex-row gap-12'>
         <img className='w-full md:max-w-[360px]' src={abt} alt="" />
         <div className='flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600'>
-          <p>Welcome to Prescripto. Your trusted partner in managing your healthcare needs conveninetly and efficiently. At Prescripto we understand the challenges individuals face when it comes to scheduling doctor's appointment and managing the healthcare records.</p>
+          <p>Welcome to Prescripto. Your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto we understand the challenges individuals face when it comes to scheduling doctor's appointment and managing their healthcare records.</p>
 
-          <p>Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform. Integrating the latest advancements to improve user experience and deliver superior service. Whether you are booking your first appointment or managing ongoing care. Prescripto is here to support you every step of the way.</p>
+          <p>Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform. Integrating the latest advancements to improve user experience and deliver superior services. Whether you are booking your first appointment or managing ongoing care. Prescripto is here to support you every step of the way.</p>
 
           <b className='text-gray-800'><p>Our Vision</p></b>
 

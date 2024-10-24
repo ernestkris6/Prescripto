@@ -47,8 +47,8 @@ export default function Navbar() {
        </ul>
 
        <div className='flex md:hidden'>
-        <button className='bg-primary w-8 h-8 px-2 text-white outline-none rounded-2xl ml-8 items-center' onClick={handleOpen}>{isOpen ? "x" : "="}</button>
-         {isOpen && <div className='absolute bg-white/50 h-[100vh] w-full top-[70px] right-[32px] left-0 pt-14 text-base font-medium text-gray-800 z-20 transition-x-full transition-transform translate-x-0 duration-300 ease-in-out'>
+        <button className='bg-primary w-8 h-8 text-white outline-none rounded-2xl ml-24 items-center' onClick={handleOpen}>{isOpen ? "x" : "="}</button>
+         {isOpen && <div className='absolute bg-white/80 h-[100vh] w-full top-[70px] right-[32px] left-0 pt-14 text-base font-medium text-gray-800 z-20 transition-x-full transition-transform translate-x-0 duration-300 ease-in-out'>
             <ul className='md:flex items-center justify-around gap-6 m-auto py-12 text-center'>
             <NavLink onClick={handleOpen} to='/'>
                 <li className='py-1 hover:text-stone-500'>HOME</li>
