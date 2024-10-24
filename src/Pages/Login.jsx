@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 export default function Login() {
 
   const [state, setState] = useState("Sign Up")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   function handleSubmit(e){
       e.preventDefault();
@@ -17,22 +20,25 @@ export default function Login() {
 
         {state === "Sign Up" && <div className='w-full'>
             <p>Full Name</p>
-            <input className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="text" />
+            <input onChange={(e)=> setName(e.target.value)} value={name} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="text" />
         </div>}
 
         <div className='w-full'>
             <p>Email</p>
-            <input className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="email" />
+            <input onChange={(e)=> setEmail(e.target.value)} value={email} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="email" />
         </div>
 
         <div className='w-full'>
             <p>Password</p>
-            <input className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="password" />
+            <input onChange={(e)=> setPassword(e.target.value)} value={password} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="password" />
         </div>
         
         <button className='bg-primary rounded w-full text-white text-base py-1 mt-4 mb-4'>{state === "Sign Up" ? "Sign Up" : "Login"}</button>
 
-        <p>{state === "Sign Up" ? "Already have an account?": "Don't have an account?" } <span className='underline text-primary'>{state === "Sign Up" ? "Login" : "Sign Up"}</span></p>
+          {state ===  "Sign Up" ? 
+          <p>Already have an account? <span onClick={()=> setState('Login')} className='text-primary underline cursor-pointer'>Login</span></p> : 
+          <p>Dont't have an account? <span onClick={()=> setState('Sign Up')} c className='text-primary underline cursor-pointer'>Sign up</span></p> }
+        
         </div>
     </form>
   )

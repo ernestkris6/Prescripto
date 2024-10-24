@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div>
       <div className='text-center text-2xl pt-10 text-gray-500'>
-        <p>CONTACT <span className='text-gray-800 font-semibold'>US</span></p>
+        <p>CONTACT <span className='text-gray-700 font-medium'>US</span></p>
       </div>
 
       <div className='flex flex-col md:flex-row my-10 justify-center gap-10 mb-28 text-sm'>
