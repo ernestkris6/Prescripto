@@ -20,17 +20,17 @@ export default function Login() {
 
         {state === "Sign Up" && <div className='w-full'>
             <p>Full Name</p>
-            <input onChange={(e)=> setName(e.target.value)} value={name} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="text" />
+            <input onChange={(e)=> setName(e.target.value)} value={name} required className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="text" />
         </div>}
 
         <div className='w-full'>
             <p>Email</p>
-            <input onChange={(e)=> setEmail(e.target.value)} value={email} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="email" />
+            <input onChange={(e)=> setEmail(e.target.value)} value={email} required className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="email" />
         </div>
 
         <div className='w-full'>
             <p>Password</p>
-            <input onChange={(e)=> setPassword(e.target.value)} value={password} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="password" />
+            <input onChange={(e)=> setPassword(e.target.value)} required value={password} className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="password" />
         </div>
         
         <button className='bg-primary rounded w-full text-white text-base py-1 mt-4 mb-4'>{state === "Sign Up" ? "Sign Up" : "Login"}</button>
@@ -43,6 +43,32 @@ export default function Login() {
     </form>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {/* <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center m-auto p-8 w-[320px] shadow-lg rounded gap-4'>
