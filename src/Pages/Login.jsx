@@ -10,29 +10,57 @@ export default function Login() {
 
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center m-auto p-8'>
-        <div className=''>
-          <p>{state === "Sign Up" ? "Sign Up" : "Login"}</p>
-        </div>
+    <form onSubmit={handleSubmit} className='min-h-[80vh] flex items-center'>
+        <div className='flex flex-col gap-3 m-auto items-start p-8 min-w-[340px] sm:min-w-96 border shadow-xl rounded-xl text-zinc-600 text-sm'>
+          <p className='text-2xl font-semibold'>{state === "Sign Up" ? "Create Account" : "Login"}</p>
+          <p className='text-sm flex'>{state === 'Sign Up' ? "Please sign up to book an appointment" : "Please login to book an appointmenty"}</p>
 
-        {state === "Sign Up" && <div>
-            <p>Name:</p>
-            <input type="text" placeholder='Enter name' />
+        {state === "Sign Up" && <div className='w-full'>
+            <p>Full Name</p>
+            <input className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="text" />
         </div>}
 
-        <div>
-            <p>Email:</p>
-            <input type="email" placeholder='Enter name' />
+        <div className='w-full'>
+            <p>Email</p>
+            <input className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="email" />
         </div>
 
-        <div>
-            <p>Password:</p>
-            <input type="password" placeholder='Enter name' />
+        <div className='w-full'>
+            <p>Password</p>
+            <input className='border border-zinc-300 rounded p-2 mt-1 w-full outline-none' type="password" />
         </div>
         
-        <button className='bg-primary w-full text-white'>{state === "Sign Up" ? "Sign Up" : "Login"}</button>
+        <button className='bg-primary rounded w-full text-white text-base py-1 mt-4 mb-4'>{state === "Sign Up" ? "Sign Up" : "Login"}</button>
 
-        <p>{state === "Sign Up" ? "Already have an account": "Don't have an account" } <span className='underline text-primary'>{state === "Sign Up" ? "Login" : "Sign Up"}</span></p>
+        <p>{state === "Sign Up" ? "Already have an account?": "Don't have an account?" } <span className='underline text-primary'>{state === "Sign Up" ? "Login" : "Sign Up"}</span></p>
+        </div>
     </form>
   )
 }
+
+
+{/* <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center m-auto p-8 w-[320px] shadow-lg rounded gap-4'>
+        <div className=''>
+          <p className='text-2xl mb-4 font-medium'>{state === "Sign Up" ? "Create Account" : "Login"}</p>
+          <p className='text-sm flex'>{state === 'Sign Up' ? "Please sign up to book an appointment" : "Please login to book an appointmenty"}</p>
+        </div>
+
+        {state === "Sign Up" && <div className=''>
+            <p>Full Name</p>
+            <input className='border rounded py-1 px-6 outline-none' type="text" />
+        </div>}
+
+        <div>
+            <p>Email</p>
+            <input className='border rounded py-1 px-6 outline-none' type="email" />
+        </div>
+
+        <div>
+            <p>Password</p>
+            <input className='border rounded py-1 px-6 outline-none' type="password" />
+        </div>
+        
+        <button className='bg-primary rounded w-full text-white text-sm py-1 mt-4 mb-4'>{state === "Sign Up" ? "Sign Up" : "Login"}</button>
+
+        <p>{state === "Sign Up" ? "Already have an account?": "Don't have an account?" } <span className='underline text-primary'>{state === "Sign Up" ? "Login" : "Sign Up"}</span></p>
+    </form> */}
