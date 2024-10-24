@@ -48,22 +48,22 @@ export default function Navbar() {
 
        <div className='flex md:hidden'>
         <button className='bg-primary w-8 h-8 px-2 text-white outline-none rounded-2xl ml-8 items-center' onClick={handleOpen}>{isOpen ? "x" : "="}</button>
-         {isOpen && <div className='absolute bg-white/50 h-[100vh] w-full top-[70px] right-[32px] left-0 pt-14 text-base font-medium text-gray-600 z-20 transition-x-full transition-transform translate-x-0 duration-300 ease-in-out'>
+         {isOpen && <div className='absolute bg-white/50 h-[100vh] w-full top-[70px] right-[32px] left-0 pt-14 text-base font-medium text-gray-800 z-20 transition-x-full transition-transform translate-x-0 duration-300 ease-in-out'>
             <ul className='md:flex items-center justify-around gap-6 m-auto py-12 text-center'>
             <NavLink onClick={handleOpen} to='/'>
-                <li className='py-1'>HOME</li>
+                <li className='py-1 hover:text-stone-500'>HOME</li>
             </NavLink>
 
             <NavLink onClick={handleOpen} to='doctors'>
-                <li className='py-1'>ALL DOCTORS</li>
+                <li className='py-1 hover:text-stone-500'>ALL DOCTORS</li>
             </NavLink>
 
             <NavLink onClick={handleOpen} to='about'>
-                <li className='py-1'>ABOUT</li>
+                <li className='py-1 hover:text-stone-500'>ABOUT</li>
             </NavLink>
 
             <NavLink onClick={handleOpen} to='contact'>
-                <li className='py-1'>CONTACT</li>
+                <li className='py-1 hover:text-stone-500'>CONTACT</li>
             </NavLink>
             </ul>
           </div>}
