@@ -8,15 +8,20 @@ import profile from "../assets/profile_pic.png"
 1
 export default function Navbar() {
 
-  const [showMenu, setshowMenu] = useState(false);
-  const [token, setToken] =useState(true);
+  // const [showMenu, setshowMenu] = useState(false);
+  const [token, setToken] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleOpen(){
+    setIsOpen((is)=> !is)
+  }
 
   const navigate = useNavigate();
+
 
   
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
-       {/* <img src={assets.doc1} alt='logo' /> */}
           <img onClick={()=> navigate('/')} className='w-44 cursor-pointer' src={logo} alt='logo'/>
        <ul className='hidden md:flex items-center justify-around gap-6'>
         <NavLink to='/'>
@@ -40,6 +45,29 @@ export default function Navbar() {
         </NavLink>
 
        </ul>
+
+       <div className='flex md:hidden'>
+        <button className='bg-primary w-8 h-8 px-2 text-white outline-none rounded-2xl ml-8 items-center' onClick={handleOpen}>{isOpen ? "x" : "="}</button>
+         {isOpen && <div className='absolute bg-white/50 h-[100vh] w-full top-[70px] right-[32px] left-0 pt-14 text-base font-medium text-gray-600 z-20 transition-x-full transition-transform translate-x-0 duration-300 ease-in-out'>
+            <ul className='md:flex items-center justify-around gap-6 m-auto py-12 text-center'>
+            <NavLink onClick={handleOpen} to='/'>
+                <li className='py-1'>HOME</li>
+            </NavLink>
+
+            <NavLink onClick={handleOpen} to='doctors'>
+                <li className='py-1'>ALL DOCTORS</li>
+            </NavLink>
+
+            <NavLink onClick={handleOpen} to='about'>
+                <li className='py-1'>ABOUT</li>
+            </NavLink>
+
+            <NavLink onClick={handleOpen} to='contact'>
+                <li className='py-1'>CONTACT</li>
+            </NavLink>
+            </ul>
+          </div>}
+       </div>
 
        <div  className='flex items-center gap-4'>
         {token ?
