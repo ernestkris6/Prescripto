@@ -4,17 +4,19 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import logo from "../assets/logo.svg";
 import drop from "../assets/dropdown_icon.svg";
 import profile from "../assets/profile_pic.png"
+import menu from '../assets/menu_icon.svg';
+import cross from '../assets/cross_icon.png';
 
 1
 export default function Navbar() {
 
-  // const [showMenu, setshowMenu] = useState(false);
+  const [showMenu, setshowMenu] = useState(false);
   const [token, setToken] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  function handleOpen(){
-    setIsOpen((is)=> !is)
-  }
+  // function handleOpen(){
+  //   setIsOpen((is)=> !is)
+  // }
 
   const navigate = useNavigate();
 
@@ -46,7 +48,7 @@ export default function Navbar() {
 
        </ul>
 
-       <div className='flex md:hidden'>
+       {/* <div className='flex md:hidden'>
         <button className='bg-primary w-8 h-8 text-white outline-none rounded-2xl ml-24 items-center' onClick={handleOpen}>{isOpen ? "x" : "="}</button>
          {isOpen && <div className='absolute bg-white/80 h-[100vh] w-full top-[70px] right-[32px] left-0 pt-14 text-base font-medium text-gray-800 z-20 transition-x-full transition-transform translate-x-0 duration-300 ease-in-out'>
             <ul className='md:flex items-center justify-around gap-6 m-auto py-12 text-center'>
@@ -67,7 +69,7 @@ export default function Navbar() {
             </NavLink>
             </ul>
           </div>}
-       </div>
+       </div> */}
 
        <div  className='flex items-center gap-4'>
         {token ?
@@ -92,7 +94,23 @@ export default function Navbar() {
           <button 
         className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block'
         onClick={()=> navigate('login')}>Create account</button> }
+
+        <img onClick={()=> setshowMenu(true)} className='w-6 md:hidden' src={menu} alt="" />
+        {/*----------mobile menu----------*/}
+        <div className={`${showMenu ? 'fixed w-full' : 'h-0 w-0'} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
+          <div className='flex items-center justify-between py-6'>
+            <img className='w-36' src={logo} alt="" />
+            <img className='w-7' onClick={()=> setshowMenu(false)} src={cross} alt="" />
+          </div>
+          <ul className='flex flex-col items-center gap-2 mt-5 text-lg font-medium'>
+            <NavLink onClick={()=> setshowMenu(false)} to='/'><p className='px-4 py-2 rounded inline-block'>HOME</p></NavLink>
+            <NavLink  onClick={()=> setshowMenu(false)} to='doctors'><p className='px-4 py-2 rounded inline-block'>ALL DOCTORS</p></NavLink>
+            <NavLink  onClick={()=> setshowMenu(false)} to='about'><p className='px-4 py-2 rounded inline-block'>ABOUT</p></NavLink>
+            <NavLink  onClick={()=> setshowMenu(false)} to='contact'><p className='px-4 py-2 rounded inline-block'>CONTACT</p></NavLink>
+          </ul>
+        </div>
        </div>
     </div>
   )
 }
+
