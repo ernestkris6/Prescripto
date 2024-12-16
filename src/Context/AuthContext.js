@@ -11,24 +11,46 @@ const initialState = {
 
 function reducer(state, action){
     switch(action.type){
-        case "login": {
+        case "login": 
+        return{
+            ...state,
+            user: action.payload,
+            isAuthenticated: true,
             
         }
-        case "logout": {
-
+        case "logout": 
+        return{
+            ...state,
+            user: null,
+            isAuthenticated: false,
         }
+
+        default : throw new Error("Incorrect details")
     }
+}
+
+const userDetails = {
+    password : "qwerty",
+    name : "Kris",
 }
 
 function authProvider({children}){
     
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const userDetails = {
-        password : "qwerty",
-        name : "Kris",
+    const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
+   
+    function login(name,password){
+        if(name === userDetails.name && password === userDetails.password){
+            dispatch({type: "login", payload: userDetails})
+        }
+    }
+
+    function logout(){
+        dispatch({type: "logout"})
     }
 
     const value = {
+        user,
+        isAuthenticated,
         login,
         logout,
         userDetails,
@@ -42,9 +64,9 @@ function authProvider({children}){
 
 function useAuth(){
    const context = useContext();
-   if(context === undefined){
-    return "Context was used in the wrong component"
-   }
+   if(context === undefined) throw new Error("AuthContext was used in the wrong component...")
+
+    return context;
 }
 
 export {authProvider, useAuth}
