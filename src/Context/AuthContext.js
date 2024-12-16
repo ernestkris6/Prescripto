@@ -34,7 +34,7 @@ const userDetails = {
     name : "Kris",
 }
 
-function authProvider({children}){
+function AuthContextProvider({children}){
     
     const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
    
@@ -69,4 +69,4 @@ function useAuth(){
     return context;
 }
 
-export {authProvider, useAuth}
+export {AuthContextProvider, useAuth}
