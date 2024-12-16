@@ -23,10 +23,16 @@ function reducer(state, action){
 function authProvider({children}){
     
     const [state, dispatch] = useReducer(reducer, initialState);
+    const userDetails = {
+        password : "qwerty",
+        name : "Kris",
+    }
 
     const value = {
         login,
-        logout
+        logout,
+        userDetails,
+        dispatch
     }
 
     return <AuthContext.Provider>
