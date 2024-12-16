@@ -110,7 +110,7 @@ export default function Navbar() {
             <NavLink  onClick={()=> setshowMenu(false)} to='doctors'><p className='px-4 py-2 rounded inline-block'>ALL DOCTORS</p></NavLink>
             <NavLink  onClick={()=> setshowMenu(false)} to='about'><p className='px-4 py-2 rounded inline-block'>ABOUT</p></NavLink>
             <NavLink  onClick={()=> setshowMenu(false)} to='contact'><p className='px-4 py-2 rounded inline-block'>CONTACT</p></NavLink>
-            <NavLink onClick={()=> setshowMenu(false)} to='login'><p className='px-4 py-2 rounded inline-block'>SIGN UP</p></NavLink>
+            <NavLink  onClick={()=> setshowMenu(false)} to='login'><p className='px-4 py-2 rounded inline-block'>SIGN UP</p></NavLink>
           </ul>
         </div>
        </div>
