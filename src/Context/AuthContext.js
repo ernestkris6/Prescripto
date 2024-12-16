@@ -54,10 +54,10 @@ function authProvider({children}){
         login,
         logout,
         userDetails,
-        dispatch
+        dispatch,
     }
 
-    return <AuthContext.Provider>
+    return <AuthContext.Provider value={value}> 
         {children}
     </AuthContext.Provider>
 }
