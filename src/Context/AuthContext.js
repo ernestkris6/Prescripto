@@ -40,7 +40,9 @@ function AppointmentContext({children}){
     const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
 
     function login(name, password){
-        if(name === details.name && password === details.password) dispatch({type: "login"})
+        if(name === details.name && password === details.password){
+            dispatch({type: "login", payload: details})
+        }
     }
 
     function logout(){
@@ -51,6 +53,7 @@ function AppointmentContext({children}){
     const value = {
         user,
         isAuthenticated,
+        details,
         dispatch,
         login,
         logout,
