@@ -1,8 +1,10 @@
+import { useContext } from "react";
+
 const { useReducer } = require("react");
 const { createContext } = require("react");
 
 
-const appointmentContext = createContext();
+const AuthtContext = createContext();
 
 const initialState = {
     user : null,
@@ -27,13 +29,31 @@ function reducer(state, action){
 }
 
 
+
+    const details = {
+        name: "Chris",
+        password: "QWERTY"
+    }
+
 function AppointmentContext({children}){
 
-    const [state, dispatch] = useReducer();
+    const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
+
+    function login(name, password){
+        if(name === details.name && password === details.password) dispatch({type: "login"})
+    }
+
+    function logout(){
+        dispatch({type: "logout"})
+    }
 
 
     const value = {
-
+        user,
+        isAuthenticated,
+        dispatch,
+        login,
+        logout,
     }
 
     return <AppointmentContext.Provider value={value}>
@@ -43,6 +63,15 @@ function AppointmentContext({children}){
     
 }
 
+function useAuth(){
+    const context = useContext()
+    if(context === undefined) throw new Error("Context was not used in the right component")
+
+        return context;
+}
+
+
+export {AppointmentContext, useAuth}
 
 
 
