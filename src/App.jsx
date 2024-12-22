@@ -12,7 +12,7 @@ import Create from './Pages/Create';
 import Login from './Pages/Login';
 import Error from './Pages/Error';
 import Footer from './components/Footer';
-import ProtectedRoutes from './components/ProtectedRoutes';
+
 
 
 
@@ -24,10 +24,7 @@ export default function App() {
           <Route index element={<Home />}/>
           <Route path='doctors' element={<Doctors />} />
           {/*Protected Routes*/}
-          <Route path='doctors/:speciality' 
-                 element={<ProtectedRoutes />}>
-                <Doctors />
-          </Route>
+          <Route path='doctors/:speciality' element={<Doctors />}/>
           <Route path='login' element={<Login />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
